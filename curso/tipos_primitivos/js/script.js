@@ -3,8 +3,8 @@ function mostrar(id) {
     document.getElementById(id).classList.add('active');
 }
 
-function copiar() {
-    const texto = document.getElementById("codigo").innerText;
+function copiar(id) {
+    const texto = document.getElementById(id).innerText;
     navigator.clipboard.writeText(texto).then(() => {
         alert("Código copiado!");
     });
