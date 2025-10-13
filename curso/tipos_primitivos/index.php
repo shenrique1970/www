@@ -48,8 +48,12 @@
             echo " do tipo "; $numa = 3e2; var_dump($numa);
             echo '<hr>';
 
-            echo '<h3>$numa = (int) 3e2 </h3>';
+            echo '<h3>$numa = (int) 3e2 coerção</h3>';
             echo " do tipo "; $numa = (int) 3e2; var_dump($numa);
+            echo '<hr>';
+
+            echo '<h3>$numb = (int) "750" coerção</h3>';
+            echo " do tipo "; $numb = (int) "750"; var_dump($numb);
             echo '<hr>';
             echo '<span>0x = HEXADECIMAL 0b = BINÁRIO 0 = OCTAL</span>';
             // 0x indica que o número está em base 16 (hexadecimal)
@@ -109,6 +113,9 @@
 
         <hr>
 
+        
+    </div>
+    <div id="especiais" class="tab">
         <?php
         echo "<h3>Resource — ponte para recursos externos</h3>";
         $codigo4 = '
@@ -143,9 +150,6 @@
         ?>
         <pre id="codigo"><?php echo htmlspecialchars($codigo3); ?></pre>
         <button onclick="copiar()">Copiar código</button>
-    </div>
-    <div id="especiais" class="tab">
-        <?php /* conteúdo especial aqui */ ?>
     </div>
 
 
