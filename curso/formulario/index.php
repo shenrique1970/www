@@ -13,9 +13,9 @@
     <section>
         <form action="cad.php" method="get">
             <label for="nome">Nome: </label>
-            <input type="text" name="name" id="idnome">
+            <input type="text" name="nome" id="idnome">
             <label for="snome">Sobrenome: </label>
-            <input type="text" name="sname" id="idsnome">
+            <input type="text" name="snome" id="idsnome">
             <input type="submit" value="Enviar">
         </form>
     </section>
