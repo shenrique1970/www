@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Expressões</h1>
+        <h1>Expressões aritméticas</h1>
     </header>
     <section>
         <pre><code>
@@ -24,14 +24,27 @@
         <br>
         <span>
             Ordem de precedência matemática. <br>
+            () Parenteses. <br>
             ** Potência. <br>
             * / % Multiplicação Divisão Modulo. <br>
             +- Adição Subtração. <br>
-            <pre><code>echo 50/2+3**2;</code></pre>
-            <?php echo 50/2+3**2; ?><br>
+            <pre><code>
+                $res2 = 50/2+3**2;
+                echo "O resultado é $res2";
+            </code></pre>
+                <?php 
+                    $resp = 50/2+3**2;
+                    echo "O resultado é $resp <br>";
+                ?><br>
             <br>
-            <pre><code>echo 50/(2+3)**2;</code></pre>
-            <?php echo 50/(2+3)**2; ?><br>
+            <pre><code>
+                $res3 = 50/(2+3)**2;
+                echo "O resultado é $res3";
+            </code></pre>
+            <?php 
+                $res3 = 50/(2+3)**2;
+                echo "O resultado é $res3";
+            ?><br>
         </span>
     </section>
 
