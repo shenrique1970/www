@@ -9,81 +9,90 @@
 </head>
 
 <body>
-    <!--
-    escalares
-    compostos
-    especiais
-    -->
-    <button onclick="mostrar('escalares')">Escalares</button>
-    <button onclick="mostrar('compostos')">Compostos</button>
-    <button onclick="mostrar('especiais')">Especiais</button>
+    <!--    escalares    compostos    especiais    -->
+    <header>
+        <h1>Tipos</h1>
+        <button onclick="mostrar('escalares')">Escalares</button>
+        <button onclick="mostrar('compostos')">Compostos</button>
+        <button onclick="mostrar('especiais')">Especiais</button>
+    </header>
 
-    <div id="escalares" class="tab active">
+    <section id="escalares" class="tab active">
         <?php
 
-            echo '<h1><b>Tipos primitivos escalares.</b></h1>';
+        echo '<h3><b>Tipos primitivos escalares.</b></h3>';
+        echo "<h3>Inteiro </h3>";
+        echo '<pre><code>$idade = 25; </code></pre>';
+        echo "do tipo ";
+        $idade = 25;
+        var_dump($idade);
 
-            echo '<h3>Inteiro - <code>$idade = 25 </code></h3>';
-            echo "do tipo ";
-            $idade = 25;
-            var_dump($idade);
+        echo "<h3>float/double</h3>";
+        echo '<pre><code>$preco = 99.90; </code></pre>';
+        echo "do tipo ";
+        $preco = 99.90;
+        var_dump($preco);
 
-            echo '<h3>float/double - <code>$preco = 99.90 </code></h3>';
-            echo "do tipo ";
-            $preco = 99.90;
-            var_dump($preco);
+        echo '<br><br><span>Nota: real a partir da versão 7 deixou de ser usasdo </span>';
 
-            echo '<h3>real a partir da versão 7 deixou de ser usasdo - <code>$preco = 99.90;</code></h3>';
+        echo "<h3>string</h3>";
+        echo '<pre><code>$mensagem = "Bem-vindo!"; </code></pre>';
+        echo "do tipo ";
+        $mensagem = "Bem-vindo!";
+        var_dump($mensagem);
 
-            echo '<h3>string - <code>$mensagem = "Bem-vindo!" </code></h3>';
-            echo "do tipo ";
-            $mensagem = "Bem-vindo!";
-            var_dump($mensagem);
+        echo "<h3>boolean </h3>";
+        echo '<pre><code>$ativo = true; </code></pre>';
+        echo "do tipo ";
+        $ativo = true;
+        var_dump($ativo);
 
-            echo '<h3>boolean - <code>$ativo = true </code></h3>';
-            echo "do tipo ";
-            $ativo = true;
-            var_dump($ativo);
+        echo "<h3>Em PHP, 0x1A é uma representação de um número inteiro (tipo int) em notação hexadecimal (base 16)";
+        echo "<hr>";
+        echo '<pre><code>$num = 0x1A </code></pre>';
+        echo " do tipo ";
+        $num = 0x1A;
+        var_dump($num);
+        echo "<br>";
+        print "E o valor desta variável é $num";
 
-            echo '<h3>$num = 0x1A </h3>';
-            echo " do tipo ";
-            $num = 0x1A;
-            var_dump($num);
-            echo "<br>";
-            print "E o valor desta variável é $num";
+        echo "<h3>Em PHP, 3e2 é uma variável do tipo float (ponto flutuante).
+         Essa notação é a forma como a linguagem interpreta números em 
+         notação científica.</h3>";
+        echo '<pre><code>$numa = 3e2; </code></pre>';
+        $numa = 3e2;
+        echo "do tipo ";
+        var_dump($numa);
+        echo " Como fazer para mudar o float?";
 
-            echo '<h3>$numa = 3e2 </h3>';
-            echo " do tipo ";
-            $numa = 3e2;
-            var_dump($numa);
-            echo '<hr>';
+        echo '<hr>';
 
-            echo '<h3>$numa = (int) 3e2 coerção</h3>';
-            echo " do tipo ";
-            $numa = (int) 3e2;
-            var_dump($numa);
-            echo '<hr>';
+        echo '<pre><code>$numa = (int) 3e2; </code>coerção</pre>';
+        echo " do tipo ";
+        $numa = (int) 3e2;
+        var_dump($numa);
+        echo '<hr>';
 
-            echo '<h3>$numb = (int) "750" coerção</h3>';
-            echo " do tipo ";
-            $numb = (int) "750";
-            var_dump($numb);
-            echo '<hr>';
+        echo '<pre><code>$numb = (int) "750" </code>coerção</pre>';
+        echo " do tipo ";
+        $numb = (int) "750";
+        var_dump($numb);
+        echo '<hr>';
 
-            echo '<span>0x = HEXADECIMAL 0b = BINÁRIO 0 = OCTAL</span>';
-            // 0x indica que o número está em base 16 (hexadecimal)
-            // 1A é o valor hexadecimal
-            // 3e2 ou 3x10 ^2 ou 3x100 = 300
-
+        echo '<span>0x = HEXADECIMAL 0b = BINÁRIO 0 = OCTAL</span>';
+        // 0x indica que o número está em base 16 (hexadecimal)
+        // 1A é o valor hexadecimal
+        // 3e2 ou 3x10 ^2 ou 3x100 = 300
         ?>
-    </div>
+        <hr>
+    </section>
 
-    <div id="compostos" class="tab">
+    <section id="compostos" class="tab">
         <h2>Tipos compostos (não primitivos, mas importantes)</h2>
 
         <?php
-            echo "<b>Array.</b>";
-            $codigo1 = '
+        echo "<b>Array.</b>";
+        $codigo1 = '
             <?php 
                 $frutas = ["maçã", "banana", "laranja"];
                 echo $frutas[1]    //banana;
@@ -95,8 +104,8 @@
         <hr>
 
         <?php
-            echo "<b>Array associativo.</b>";
-            $codigo2 = '
+        echo "<b>Array associativo.</b>";
+        $codigo2 = '
             <?php 
                 $usuario = ["nome" => "João", "idade" => 30];
                 echo $usuario["nome"] . "<br>"; // João
@@ -108,8 +117,8 @@
         <hr>
 
         <?php
-            echo "<h3><b>Object — instância de uma classe.</b></h3>";
-            $codigo3 = '
+        echo "<h3><b>Object — instância de uma classe.</b></h3>";
+        $codigo3 = '
             <?php 
                 class Pessoa
                 {
@@ -126,14 +135,14 @@
         ?>
         <pre id="codigo3"><?php echo htmlspecialchars($codigo3); ?></pre>
         <button onclick="copiar('codigo3')">Copiar código</button>
-
         <hr>
-    </div>
+    </section>
 
-    <div id="especiais" class="tab">
+    <section id="especiais" class="tab">
+
         <?php
-            echo "<h3>Resource — ponte para recursos externos.</h3>";
-            $codigo4 = '
+        echo "<h3>Resource — ponte para recursos externos.</h3>";
+        $codigo4 = '
             <?php 
                 $arquivo = fopen("exemplo.txt", "r");
                 if (is_resource($arquivo)) {
@@ -148,8 +157,8 @@
         <hr>
 
         <?php
-            echo "<h3>Callable — função ou método que pode ser chamado.</h3>";
-            $codigo5 = '
+        echo "<h3>Callable — função ou método que pode ser chamado.</h3>";
+        $codigo5 = '
             <?php 
                 function saudacao() {
                     return "Olá!";
@@ -169,17 +178,17 @@
         <hr>
 
         <?php
-            echo "<h3>Null — ausência de valor.</h3>";
-            echo '<h3>null - <code>$usuario = null </code></h3>';
-            echo "do tipo ";
-            $usuario = null;
-            var_dump($usuario);
+        echo "<h3>Null — ausência de valor.</h3>";
+        echo '<h3>null - <code>$usuario = null </code></h3>';
+        echo "do tipo ";
+        $usuario = null;
+        var_dump($usuario);
         ?>
 
         <hr>
 
         <?php
-            $codigo6 = '
+        $codigo6 = '
             <?php
                 $usuario = null;
 
@@ -194,8 +203,8 @@
         <hr>
 
         <?php
-            echo "<h3><b>mixed — tipo genérico (usado em declarações de função)</b></h3>";
-            $codigo7 = '
+        echo "<h3><b>mixed — tipo genérico (usado em declarações de função)</b></h3>";
+        $codigo7 = '
             <?php
                 function processar(mixed $entrada): mixed
                 {
@@ -215,11 +224,8 @@
         ?>
         <pre id="codigo7"><?php echo htmlspecialchars($codigo7); ?></pre>
         <button onclick="copiar('codigo7')">Copiar código</button>
-    </div>
-
-
-    <hr>
-
+        <hr>
+    </section>
     <script src="js/script.js"></script>
 </body>
 

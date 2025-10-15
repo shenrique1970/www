@@ -8,8 +8,10 @@
 </head>
 
 <body>
-    <h1>Bem-vindo!</h1>
-
+    <header>
+       <h1>Bem-vindo!</h1> 
+    </header>
+    
     <?php
         date_default_timezone_set("America/Sao_Paulo");
 
@@ -29,8 +31,10 @@
         echo "<p>Hora atual: $hora</p>";
     ?>
 
-
-    <p>Hora atual: <span id="hora"></span></p>
+    <section>
+        <p>Hora atual: <span id="hora"></span></p>
+    </section>
+    
 
     <script src="js/script.js"></script>
 </body>
