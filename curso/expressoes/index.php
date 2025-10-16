@@ -28,24 +28,28 @@
             ** Potência. <br>
             * / % Multiplicação Divisão Modulo. <br>
             +- Adição Subtração. <br>
-            <pre><code>
+        </span>
+    </section>
+    <section>
+        <pre><code>
                 $res2 = 50/2+3**2;
                 echo "O resultado é $res2";
             </code></pre>
-                <?php 
-                    $resp = 50/2+3**2;
-                    echo "O resultado é $resp <br>";
-                ?><br>
-            <br>
-            <pre><code>
+        <?php
+        $resp = 50 / 2 + 3 ** 2;
+        echo "O resultado é $resp <br>";
+        ?><br>
+        <br>
+    </section>
+    <section>
+        <pre><code>
                 $res3 = 50/(2+3)**2;
                 echo "O resultado é $res3";
             </code></pre>
-            <?php 
-                $res3 = 50/(2+3)**2;
-                echo "O resultado é $res3";
-            ?><br>
-        </span>
+        <?php
+        $res3 = 50 / (2 + 3) ** 2;
+        echo "O resultado é $res3";
+        ?><br>
     </section>
 
 </body>
