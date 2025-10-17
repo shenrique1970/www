@@ -22,17 +22,22 @@
     <section>
         <h3>Antecessor e sucessor.</h3>
         <pre><code>
-            $numero = (int) $_GET["numero"];
-            $antes = $numero - 1;
-            $depois = $numero + 1;
-            echo "Antecessor $antes numero digitado $numero e seu sucessor $depois"
+            if (isset($_GET["numero"])) {
+                $numero = (int) $_GET["numero"];
+                $antes = $numero - 1;
+                $depois = $numero + 1;
+                echo "Antecessor: $antes | Número digitado: $numero | Sucessor: $depois.";
+            }
         </code></pre>
         <?php
-        $numero = (int) $_GET["numero"];
-        $antes = $numero - 1;
-        $depois = $numero + 1;
-        echo "Antecessor $antes numero digitado $numero e seu sucessor $depois"
+            if (isset($_GET["numero"])) {
+                $numero = (int) $_GET["numero"];
+                $antes = $numero - 1;
+                $depois = $numero + 1;
+                echo "Antecessor: $antes | Número digitado: $numero | Sucessor: $depois.";
+            }
         ?>
+
     </section>
 
 </body>
