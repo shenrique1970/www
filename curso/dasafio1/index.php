@@ -13,14 +13,15 @@
         <h1>Desafio 1</h1>
     </header>
     <section>
+        <h3>Antecessor e sucessor.</h3>
         <form action="des.php" method="get">
             <label for="numero">Digito um numero</label>
             <input type="number" name="numero" id="idnumero">
             <input type="submit" value="Enviar">
         </form>
     </section>
-    <section>
-        <h3>Antecessor e sucessor.</h3>
+    <section>  
+        <!--Mostrar código-->    
         <pre><code>
             if (isset($_GET["numero"])) {
                 $numero = (int) $_GET["numero"];
@@ -29,24 +30,15 @@
                 echo "Antecessor: $antes | Número digitado: $numero | Sucessor: $depois.";
             }
         </code></pre>
-        <?php
-            // isset() para evitar erro
-            if (isset($_GET["numero"])) {
-                $numero = (int) $_GET["numero"];
-                $antes = $numero - 1;
-                $depois = $numero + 1;
-                echo "Antecessor: $antes | Número digitado: $numero | Sucessor: $depois.";
-            }
-        ?>
+        <h3>Ou</h3>
         <pre><code>
             if (isset($_GET["numero"])) {
                 $numero = (int) $_GET["numero"];
-                $antes = $numero - 1;
-                $depois = $numero + 1;
-                echo "Antecessor: $antes | Número digitado: $numero | Sucessor: $depois.";
+                echo "Número digitado: " . $numero; 
+                echo "Número anterior: " . ($numero - 1);
+                echo "Número posterior: " . ($numero + 1);
             }
         </code></pre>
-
     </section>
 
 </body>
