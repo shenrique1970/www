@@ -30,6 +30,7 @@
             }
         </code></pre>
         <?php
+            // isset() para evitar erro
             if (isset($_GET["numero"])) {
                 $numero = (int) $_GET["numero"];
                 $antes = $numero - 1;
