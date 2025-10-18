@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Relógio Dinâmico</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
 <body>

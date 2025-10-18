@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
+    <title>Desafio 3</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Formulários.</h1>
+        <h1>Conversor de moedas.</h1>
     </header>
     <section>
-        <form action="cad.php" method="get">
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="idnome">
-            <label for="snome">Sobrenome: </label>
-            <input type="text" name="snome" id="idsnome">
+        <form action="conv.php" method="get">
+            <label for="valor">Quanto vai converter?</label>
+            <input type="number" name="valor" id="idvalor">
             <input type="submit" value="Enviar">
         </form>
+        
     </section>
-    
     
 </body>
 </html>
