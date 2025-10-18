@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 1</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
                 echo "Número posterior: " . ($numero + 1) ."<br>";
             }
         ?>
-        <p><a href="javascript:history.go(-1)">Voltar</a></p>
+        <button onclick="javascript:history.go(-1)">Voltar</button>
     </section> 
 </body>
 </html>
